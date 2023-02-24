@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css.webfonts">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="fresh-veggies.html">
+    <link rel="stylesheet" href="index.html">
+</head>
+<body>
+    
+    <div class="all"> 
+            <div class="nav-wrapper">
+            <div class="nav-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="fresh-veggies.html">Fresh Veggies</a>
+                <div class="toggle" id="icon">
+                    <div class="toggle-button" onclick="Animatedtoggle()"></div>
+                </div>
+            </div>
+            </div>
+            <div class="brand">
+            </div>
+            <div class="contact"><ul>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-brands fa-twitter-square"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </span>
+                </a>
+            </li>
+            </ul></div>
+    </div>
+    
+
+
+    
+
+    <script src="main.js"></script>
+    <script>
+        let toggle = document.querySelector(".toggle");
+
+        function Animatedtoggle(){
+            toggle.classList.toggle("active");
+        }
+
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme")
+        }
+        if (toggle.classList.toggle("active")){
+            document.body.classList.toggle("dark-theme");
+        }
+        else{
+            document.body.classList.toggle("root");
+        }
+    </script>
+</body>
+</html>
