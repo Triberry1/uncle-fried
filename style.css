@@ -3,7 +3,7 @@
 }
 html{
     margin: 0px;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 :root{
@@ -17,7 +17,7 @@ html{
 }
 .nav-wrapper{
     padding-top: 5vh;
-    height: 100vh;
+    height: 30vh;
     width: 18vh;
 }
 .nav-bar{
@@ -61,9 +61,11 @@ h4, h3, h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .contact{
-    
+    margin-top: -100vh;
+    position: absolute;
+    margin-left: 60vh;
     height: 8vh;
-    width: 45vh;
+    width: 20vh;
 }
 .contact ul{
     display: flex;
@@ -89,9 +91,8 @@ h4, h3, h2{
     transition: 0.5s;
     
 }
-.all{
-    display: flex;
-    justify-content: space-between;
+body{
+    background: var(--secondary);
 }
 .menu-sidebar{
     display: none;
@@ -125,17 +126,114 @@ h4, h3, h2{
 .nav-bar .toggle.active .toggle-button{
     left: 15px;
 }
-.content{
-    background: var(--secondary);
-}
 .brand{
     background-image: url("./Grey___Green_Elegant_Minimal_Good_Taste_Food_Restaurant_Logo-removebg-preview.png");
     height: 5vh;
     width: 20vh;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 3vh;
+    margin-top: -30vh;
+    position: absolute;
+    margin-left: 25vh;
 }
-body{
-    background: var(--secondary);
+.slider{
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+.temp{
+    margin-top: 25vh;
+    margin-left: 30vh;
+}
+.manual-nav{
+    position: absolute;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 230px;
+}
+.manual-btn{
+    border: 1px solid rgba(94, 228, 21, 0.945);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 5px;
+}
+.manual-btn:hover{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+#radio6:checked ~ .first{
+    margin-left: -100%;
+}
+
+.auto-nav{
+    position: absolute;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 230px;
+}
+.auto-nav div{
+    border: 1px solid rgba(94, 228, 21, 0.945);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.auto-nav div:not(:last-child){
+    margin-right: 5px;
+}
+#radio1:checked ~ .auto-nav .auto-btn1{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio2:checked ~ .auto-nav .auto-btn2{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio3:checked ~ .auto-nav .auto-btn3{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio4:checked ~ .auto-nav .auto-btn4{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio5:checked ~ .auto-nav .auto-btn5{
+    background: rgba(94, 228, 21, 0.945);
+}
+#radio6:checked ~ .auto-nav .auto-btn6{
+    background: rgba(94, 228, 21, 0.945);
 }

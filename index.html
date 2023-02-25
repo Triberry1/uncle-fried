@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="index.html">
 </head>
 <body>
-    
-    <div class="all"> 
             <div class="nav-wrapper">
             <div class="nav-bar">
                 <a href="index.html">Home</a>
@@ -25,6 +23,55 @@
             </div>
             </div>
             <div class="brand">
+            </div>
+            <div class="temp">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <input type="radio" name="radio-btn" id="radio5">
+                        <input type="radio" name="radio-btn" id="radio6">
+            
+                        <div class="slide first">
+                            <img src="images/im1.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images/im2.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images/im3.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images/im4.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images/im5.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="images/im6.jpeg" alt="">
+                        </div>
+            
+                        <div class="auto-nav">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                            <div class="auto-btn5"></div>
+                            <div class="auto-btn6"></div>
+                        </div>
+                
+                        <div class="manual-nav">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                            <label for="radio5" class="manual-btn"></label>
+                            <label for="radio6" class="manual-btn"></label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="contact"><ul>
             <li class="list">
@@ -56,10 +103,10 @@
                 </a>
             </li>
             </ul></div>
-    </div>
+        </div> 
     
 
-
+    
     
 
     <script src="main.js"></script>
@@ -81,6 +128,17 @@
         else{
             document.body.classList.toggle("root");
         }
+        
+    </script>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 6){
+                counter = 1;
+            }
+        }, 5000);
     </script>
 </body>
 </html>
